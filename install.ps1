@@ -2,6 +2,7 @@
 $linebreak = "################################################"
 $break = "`r`n"
 $repoUrl = "https://github.com/jonaswouters/windows-configuration.git"
+$repoUrlSSH = "git@github.com:jonaswouters/windows-configuration.git"
 $configFolder = "$HOME/Configuration"
 
 # Install Chocolatey if not installed.
@@ -44,5 +45,7 @@ write-host $linebreak
 & .\apps\apps.ps1
 
 write-host $linebreak
+
+git remote set-url origin $repoUrlSSH
 
 write-host "Installation finished."
