@@ -3,7 +3,7 @@ $linebreak = "################################################"
 $break = "`r`n"
 $repoUrl = "https://github.com/jonaswouters/windows-configuration.git"
 $repoUrlSSH = "git@github.com:jonaswouters/windows-configuration.git"
-$configFolder = "$HOME/Configuration"
+$configFolder = "$HOME\Configuration"
 
 # Install Chocolatey if not installed.
 if(test-path "C:\ProgramData\chocolatey\choco.exe"){
@@ -39,7 +39,7 @@ if(Test-Path $configFolder){
     Set-Location $configFolder
     git pull
 } else {
-    write-host "Cloning git repository"
+    write-host "Cloning git repository to" $configFolder
     git clone $repoUrl $configFolder
 }
 
