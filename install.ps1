@@ -6,13 +6,12 @@ $repoUrlSSH = "git@github.com:jonaswouters/windows-configuration.git"
 $configFolder = "$HOME/Configuration"
 
 # Install Chocolatey if not installed.
-$testchoco = powershell choco -v
-if(-not($testchoco)){
-    Write-Output "Seems Chocolatey is not installed, installing now"
-    Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+if(test-path "C:\ProgramData\chocolatey\choco.exe"){
+    Write-Output "Chocolatey Version $testchoco is already installed"
 }
 else{
-    Write-Output "Chocolatey Version $testchoco is already installed"
+    Write-Output "Seems Chocolatey is not installed, installing now"
+    Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 }
 
 ################################################
