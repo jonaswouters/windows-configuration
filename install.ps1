@@ -50,6 +50,7 @@ if(Test-Path $configFolder){
 } else {
     write-host "Cloning git repository to" $configFolder
     git clone $repoUrl $configFolder
+    Set-Location $configFolder
 }
 
 write-host $linebreak$break$break
