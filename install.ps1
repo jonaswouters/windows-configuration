@@ -30,6 +30,15 @@ $apps = Write-Output `
 
 choco install -y -r $apps
 
+
+################################################
+write-host $break$linebreak
+write-host "Fixing environment..."
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") 
+write-host $linebreak$break$break
+################################################
+
+
 ################################################
 
 write-host $break$linebreak
