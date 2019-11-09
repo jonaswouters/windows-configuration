@@ -35,7 +35,7 @@ choco install -y -r $apps
 write-host $break$linebreak
 write-host "Retrieving git repository"
 if(Test-Path $configFolder){
-    write-host "Using existing git repository"
+    write-host "Using existing git repository" $configFolder
     Set-Location $configFolder
     git pull
 } else {
