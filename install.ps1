@@ -35,9 +35,11 @@ choco install -y -r $apps
 write-host $break$linebreak
 write-host "Retrieving git repository"
 if(![System.IO.File]::Exists($configFolder)){
+    write-host "Using existing git repository"
     Set-Location $configFolder
     git pull
 } else {
+    write-host "Cloning git repository"
     git clone $repoUrl $configFolder
 }
 
