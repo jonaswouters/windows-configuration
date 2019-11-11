@@ -23,7 +23,6 @@ write-host $linebreak
 # Install basic packages to be able to proceed
 $apps = Write-Output `
     git.install `
-    googlechrome `
     7zip.install `
     openssh `
     curl
@@ -60,6 +59,15 @@ write-host $linebreak$break$break
 # Install other packages
 write-host "Installing other packages ..."
 & .\apps\apps.ps1
+write-host $linebreak$break$break
+
+
+################################################
+
+
+# Windows Defender path exclusions
+write-host "Settings path exclusions ..."
+& .\Settings\defender-exclusions.ps1
 write-host $break$break$linebreak$break$break
 
 

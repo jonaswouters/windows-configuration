@@ -25,3 +25,8 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; ./install.ps1
 * Configure ShareX destination folder (InSync configuration backup)
 * Copy over private files (GPG, SSH & AWS)
 * Authenticate various apps
+
+## Thanks to
+
+* https://github.com/mikemaccana/powershell-profile
+* https://gist.github.com/nerzhulart/89c6a376b521a6e7eb69a04277a9489a
