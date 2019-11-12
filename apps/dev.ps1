@@ -26,3 +26,10 @@ $goPathVal = $projectsPath + "\Go"
 [System.Environment]::SetEnvironmentVariable("GOPATH", $goPathVal, [System.EnvironmentVariableTarget]::Machine)
 Write-Host "Adding Path Exclusion: " $goPathVal
 Add-MpPreference -ExclusionPath $goPathVal
+
+# WSL and Hyper-V
+
+Write-Host ""
+Write-Host "Enabling WSL and Hyper-V"
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
