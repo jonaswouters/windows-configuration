@@ -196,6 +196,8 @@ $processExclusions.Add('go.exe') > $null
 $processExclusions.Add('gofmt.exe') > $null
 $processExclusions.Add('hey.exe') > $null
 
+# Remarkable
+$processExclusions.Add('reMarkable.exe') > $null
 
 Write-Host "This script will create Windows Defender exclusions for common Visual Studio 2017 folders and processes."
 Write-Host ""
