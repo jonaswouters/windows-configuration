@@ -28,7 +28,6 @@ The installation script might be included at a later point in this repo
 * Journey: https://2appstudio.com/journey/
 * Remarkable desktop: https://my.remarkable.com/
 
-
 ## Manual configuration (for now)
 
 * Check startup items
@@ -55,4 +54,4 @@ The installation script might be included at a later point in this repo
 * SSH agent setup (dont forget WSL)
 * Git config setup
 * PHP Version manager powershell
-* Configure PC Name?
+* ~~Configure PC Name?~~

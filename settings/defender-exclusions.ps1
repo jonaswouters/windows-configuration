@@ -76,6 +76,7 @@ $processExclusions.Add('ServiceHub.Host.Node.x86.exe') > $null
 $processExclusions.Add('vbcscompiler.exe') > $null
 $processExclusions.Add('nuget.exe') > $null
 $processExclusions.Add('ssh-agent.exe') > $null
+# PHP ....
 
 # VCS
 $processExclusions.Add('git.exe') > $null
@@ -86,9 +87,6 @@ $processExclusions.Add('bash.exe') > $null
 $processExclusions.Add('powershell.exe') > $null
 $processExclusions.Add('conhost.exe') > $null
 $processExclusions.Add('powershell.exe') > $null
-
-# InSync
-$processExclusions.Add('Insync.exe') > $null
 
 # Glasswire
 $processExclusions.Add('GlassWire.exe') > $null
@@ -196,8 +194,13 @@ $processExclusions.Add('go.exe') > $null
 $processExclusions.Add('gofmt.exe') > $null
 $processExclusions.Add('hey.exe') > $null
 
-# Remarkable
+
+# Additional programs
 $processExclusions.Add('reMarkable.exe') > $null
+$processExclusions.Add('Charles.exe') > $null
+$processExclusions.Add('GoogleDriveFS.exe') > $null
+$processExclusions.Add('Keybase.exe') > $null
+$processExclusions.Add('Everything.exe') > $null
 
 Write-Host "This script will create Windows Defender exclusions for common Visual Studio 2017 folders and processes."
 Write-Host ""

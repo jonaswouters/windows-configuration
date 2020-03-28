@@ -16,6 +16,20 @@ else{
 
 ################################################
 write-host $break$linebreak
+write-host "Renaming PC"
+write-host $linebreak
+################################################
+$currentPcName = $env:computername
+$newPcName = Read-Host "Rename PC? Type new name: [$currentPcName]" 
+if ($newPcName -ne '') {
+    Rename-Computer -newname $newPcName
+    write-host "Name changed to $newPcName"
+ } else {
+     write-host "Name is still $currentPcName"
+ }
+
+################################################
+write-host $break$linebreak
 write-host "Installing base packages"
 write-host $linebreak
 ################################################

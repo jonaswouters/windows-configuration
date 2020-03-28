@@ -3,8 +3,7 @@ $productivityapps = Write-Output `
     sharex `
     zoom `
     firefox `
-    googlechrome `
-    office365business `
+    googlechrome `    
     everything `
     keypirinha `
     powertoys `
@@ -14,7 +13,8 @@ $productivityapps = Write-Output `
     processhacker `
     wincdemu `
     google-drive-file-stream `
-    filezilla
+    filezilla `
+    office365business
 
 
 choco install -y -r $productivityapps
