@@ -71,3 +71,15 @@ if ($installSecurity -ne 'n') {
 } else {
     write-host "Skipping security packages"
 }
+
+################################################
+# Install (and remove crap) windows store packages?
+$installDev = Read-Host "Install store packages? [Y/n]"
+write-host $linebreak$break
+################################################
+
+if ($installDev -ne 'n') {
+   & .\apps\store.ps1
+} else {
+    write-host "Skipping store packages"
+}

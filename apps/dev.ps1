@@ -4,7 +4,10 @@ $devapps = Write-Output `
     vscode `
     golang `
     nvm.portable `
-    graphviz # for golang profiling
+    graphviz `
+    vagrant `
+    cacher `
+    charles
 
 choco install -y -r $devapps
 

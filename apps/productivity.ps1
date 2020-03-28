@@ -1,11 +1,20 @@
 # Install productivityt packages
 $productivityapps = Write-Output `
     sharex `
-    rescuetime `
     zoom `
     firefox `
     googlechrome `
-    1password `
-    office365business
+    office365business `
+    everything `
+    keypirinha `
+    powertoys `
+    quicklook `
+    logitech-options `
+    procexp `
+    processhacker `
+    wincdemu `
+    google-drive-file-stream `
+    filezilla
+
 
 choco install -y -r $productivityapps

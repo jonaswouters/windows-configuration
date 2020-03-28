@@ -71,6 +71,11 @@ write-host "Settings path exclusions ..."
 write-host $break$break$linebreak$break$break
 
 
+# Other settings
+write-host "Other settings ..."
+& .\Settings\windows-settings.ps1
+write-host $break$break$linebreak$break$break
+
 ################################################
 
 
