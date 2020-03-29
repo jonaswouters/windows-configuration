@@ -41,6 +41,13 @@ The installation script might be included at a later point in this repo
 * Authenticate various apps
 * Run Google Drive Stream script in settings folder: `powershell -noprofile -executionpolicy bypass -file ./PinGoogleDriveFS.ps1`
 
+## After installing WSL 2
+
+* Install WSL2 Linux kernel https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel
+* Install a WSL distribution
+* in the WSL, run for SSH setup `wget -O - https://raw.githubusercontent.com/jonaswouters/windows-configuration/master/settings/wsl-ssh-setup.sh | bash`
+* Install docker for wsl2 https://docs.docker.com/docker-for-windows/wsl-tech-preview/
+
 ## Thanks to
 
 * https://github.com/mikemaccana/powershell-profile
@@ -51,7 +58,7 @@ The installation script might be included at a later point in this repo
 ## Todo
 
 * Make powershell look nicer
-* SSH agent setup (dont forget WSL)
-* Git config setup
+* ~~SSH agent setup (dont forget WSL)~~
+* ~~Git config setup~~
 * PHP Version manager powershell
 * ~~Configure PC Name?~~

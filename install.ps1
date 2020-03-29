@@ -89,6 +89,11 @@ write-host "Settings path exclusions ..."
 & .\Settings\defender-exclusions.ps1
 write-host $break$break$linebreak$break$break
 
+# Powershell modules
+write-host "Powershell modules ..."
+& .\Settings\powershell-modules.ps1
+write-host $break$break$linebreak$break$break
+
 
 # Other settings
 write-host "Other settings ..."
