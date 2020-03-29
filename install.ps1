@@ -52,7 +52,11 @@ $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";"
 write-host $linebreak$break$break
 ################################################
 
-
+################################################
+write-host $break$linebreak
+write-host "Configure Git settings ..."
+& .\settings\gitconfig.ps1
+write-host $linebreak$break$break
 ################################################
 
 write-host $break$linebreak
@@ -99,6 +103,10 @@ write-host "* Fixing git url"
 git remote set-url origin $repoUrlSSH
 write-host "* Last few things"
 # TODO
+
+# Fix SSH agent auto start
+write-host "Start SSH agent automatically"
+Set-Service -Name ssh-agent -StartupType Manual
 
 
 # The end
