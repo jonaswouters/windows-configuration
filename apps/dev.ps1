@@ -5,6 +5,7 @@ $devapps = Write-Output `
     golang `
     nvm.portable `
     graphviz `
+    imagemagick `
     vagrant `
     cacher `
     charles

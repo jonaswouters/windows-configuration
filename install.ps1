@@ -39,7 +39,8 @@ $apps = Write-Output `
     git.install `
     7zip.install `
     openssh `
-    curl
+    curl `
+    neovim
 
 choco install -y -r $apps
 

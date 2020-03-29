@@ -3,7 +3,7 @@ $productivityapps = Write-Output `
     sharex `
     zoom `
     firefox `
-    googlechrome `    
+    googlechrome `
     everything `
     keypirinha `
     powertoys `
@@ -14,6 +14,8 @@ $productivityapps = Write-Output `
     wincdemu `
     google-drive-file-stream `
     filezilla `
+    7-taskbar-tweaker `
+    vnote.portable `
     office365business
 
 
