@@ -23,9 +23,8 @@ git config --global push.default current
 git config --global pull.rebase true
 git config --global rebase.autoStash true
 
-# Configure Git to ensure line endings in files you checkout are correct for Windows.
-# For compatibility, line endings are converted to Unix style when you commit files.
-git config --global core.autocrlf true
+# Configure Git to ensure line endings are checkout for linux, as modern editors can handle that just fine.
+git config --global core.autocrlf input
 git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"
 
 # Aliasses
