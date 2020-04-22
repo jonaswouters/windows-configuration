@@ -20,3 +20,6 @@ $productivityapps = Write-Output `
 
 
 choco install -y -r $productivityapps
+
+# Install sumatrapdf with arguments
+choco install sumatrapdf.install -ia "/opt pdfpreviewer /register"
