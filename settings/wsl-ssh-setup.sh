@@ -10,3 +10,4 @@ cp -r $sourcePath ~/.ssh
 echo "Fixing ssh permissions"
 chmod 700 ~/.ssh
 chmod -R 600 ~/.ssh/id_rsa*
+chmod -R 600 ~/.ssh/config
