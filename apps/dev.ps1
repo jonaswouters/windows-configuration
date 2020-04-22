@@ -8,7 +8,7 @@ $devapps = Write-Output `
     imagemagick `
     vagrant `
     cacher `
-    charles
+    charles4
 
 choco install -y -r $devapps
 
