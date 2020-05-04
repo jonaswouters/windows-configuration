@@ -111,7 +111,7 @@ write-host "* Last few things"
 
 # Fix SSH agent auto start
 write-host "Start SSH agent automatically"
-Set-Service -Name ssh-agent -StartupType Manual
+Set-Service -Name ssh-agent -StartupType Automatic
 
 
 # The end
