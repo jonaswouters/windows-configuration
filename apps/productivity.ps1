@@ -4,18 +4,16 @@ $productivityapps = Write-Output `
     zoom `
     firefox `
     googlechrome `
-    everything `
     keypirinha `
     powertoys `
     quicklook `
     logitech-options `
-    procexp `
     processhacker `
     wincdemu `
-    google-drive-file-stream `
     filezilla `
     7-taskbar-tweaker `
-    vnote.portable `
+    copyq `
+    teracopy `
     office365business
 
 

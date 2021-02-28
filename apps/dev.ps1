@@ -6,10 +6,8 @@ $devapps = Write-Output `
     nvm.portable `
     graphviz `
     imagemagick `
-    vagrant `
-    cacher `
     charles4 `
-    cascadiacode`
+    cascadiacode `
     cascadiacodepl
 
 choco install -y -r $devapps
