@@ -125,6 +125,7 @@ $apps = Write-Output `
     less `
     touch `
     coreutils `
+    hwinfo `
     7tt
 
 scoop install $apps
