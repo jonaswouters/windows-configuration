@@ -5,7 +5,7 @@ read username
 
 sourcePath="/mnt/c/Users/$username"
 echo "Copying files from $sourcePath/.ssh"
-cp -r $sourcePath ~/.ssh
+cp -r $sourcePath/.ssh ~/.ssh
 
 echo "Copying git config from $sourcePath/.gitconfig"
 cp $sourcePath/.gitconfig ~/.gitconfig
