@@ -26,6 +26,12 @@ The installation script might be included at a later point in this repo
 * TreeSize: https://customers.jam-software.de/directDownload.php
 * Adguard: https://adguard.com/en/welcome.html
 * Remarkable desktop: https://my.remarkable.com/
+* DriveThruRPG
+* Painter 
+* Charles
+* Glasswire
+* yubikey authenticator
+
 
 ## Manual configuration (for now)
 

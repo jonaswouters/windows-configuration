@@ -1,14 +1,13 @@
 # Install software development packages
 $devapps = Write-Output `
-    jetbrainstoolbox `
+    jetbrains-toolbox `
     vscode `
-    golang `
-    nvm.portable `
+    go `
+    nvm `
     graphviz `
     imagemagick `
-    charles4 `
-    cascadiacode `
-    cascadiacodepl
+    CascadiaCode-NF-Mono `
+    CascadiaCode-NF
 
 choco install -y -r $devapps
 

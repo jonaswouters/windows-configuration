@@ -1,8 +1,7 @@
 # Install security packages
 $securityapps = Write-Output `
     glasswire `
-    yubikey-manager `
-    yubico-authenticator `
+    yubikey-manager-qt `
     gpg4win `
     keybase
 

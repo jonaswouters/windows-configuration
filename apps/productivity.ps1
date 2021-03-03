@@ -4,17 +4,18 @@ $productivityapps = Write-Output `
     zoom `
     firefox `
     googlechrome `
-    keypirinha `
-    powertoys `
+    dropbox-np `
+    powertoys-np `
     quicklook `
-    logitech-options `
     processhacker `
     wincdemu `
     filezilla `
-    7-taskbar-tweaker `
+    7tt `
+    taskbarx `
     copyq `
-    teracopy `
-    office365business
+    notepads `
+    teracopy-np `
+    office-365-apps-np
 
 
 choco install -y -r $productivityapps

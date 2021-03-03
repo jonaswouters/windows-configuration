@@ -5,13 +5,16 @@ $repoUrl = "https://github.com/jonaswouters/windows-configuration.git"
 $repoUrlSSH = "git@github.com:jonaswouters/windows-configuration.git"
 $configFolder = "$HOME\Configuration"
 
-# Install Chocolatey if not installed.
-if(test-path "C:\ProgramData\chocolatey\choco.exe"){
-    Write-Output "Chocolatey Version $testchoco is already installed"
+# Set execution policy
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+# Install Scoop if not installed.
+if(test-path "$HOME\scoop\apps\scoop\current"){
+    Write-Output "Scoop is already installed"
 }
 else{
-    Write-Output "Seems Chocolatey is not installed, installing now"
-    Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+    Write-Output "Seems like Scoop is not installed, installing now"
+    Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
 }
 
 ################################################
@@ -35,15 +38,25 @@ write-host $linebreak
 ################################################
 
 # Install basic packages to be able to proceed
+scoop update
 $apps = Write-Output `
-    git.install `
-    7zip.install `
-    openssh `
+    aria2 `
+    sudo `
+    git `
+    7zip `
     curl `
     neovim
 
-choco install -y -r $apps
+scoop install $apps
 
+# Install openssh globally
+sudo scoop install win32-openssh --global
+sudo C:\ProgramData\scoop\apps\win32-openssh\current\install-sshd.ps1
+
+# extra scoop buckets
+scoop bucket add extras
+scoop bucket add nerd-fonts
+scoop bucket add nonportable
 
 ################################################
 write-host $break$linebreak
