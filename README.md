@@ -27,10 +27,7 @@ The installation script might be included at a later point in this repo
 * Adguard: https://adguard.com/en/welcome.html
 * Remarkable desktop: https://my.remarkable.com/
 * DriveThruRPG
-* Painter 
-* Charles
-* Glasswire
-* yubikey authenticator
+* Painter
 
 
 ## Manual configuration (for now)
@@ -38,7 +35,7 @@ The installation script might be included at a later point in this repo
 * Check startup items
 * Login 1Password
 
-* Configure ShareX destination folder (G:\My Drive\Screenshots)
+* Configure ShareX destination folder (<path-to->\Screenshots)
 * * Task settings File naming:
 * * * Capture: `%y-%mo-%d - %hh%mihm%ss - %ra{10}`
 * * * Window Capture: `%y-%mo-%d - %hh%mihm%ss - %pn - %ra{10}`
@@ -49,7 +46,7 @@ The installation script might be included at a later point in this repo
 * Install WSL2 Linux kernel https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel
 * Install a WSL distribution
 * in the WSL, run for SSH setup `wget -O - https://raw.githubusercontent.com/jonaswouters/windows-configuration/master/settings/wsl-ssh-setup.sh | bash`
-* Install docker for wsl2 https://docs.docker.com/docker-for-windows/wsl-tech-preview/
+* Install docker for wsl2 https://docs.docker.com/docker-for-windows/wsl/
 
 ## Thanks to
 
@@ -62,5 +59,5 @@ The installation script might be included at a later point in this repo
 * Make powershell look nicer
 * ~~SSH agent setup (dont forget WSL)~~
 * ~~Git config setup~~
-* PHP Version manager powershell
+* ~~PHP Version manager powershell~~
 * ~~Configure PC Name?~~
