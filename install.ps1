@@ -48,17 +48,16 @@ write-host $linebreak
 
 scoop update
 
-# Install global packages and openssh
-sudo scoop install win32-openssh 7zip git --global
-sudo C:\ProgramData\scoop\apps\win32-openssh\current\install-sshd.ps1
-
 # Install basic packages to be able to proceed
 $apps = Write-Output `
     aria2 `
-    sudo `
-    git
+    gsudo
 
 scoop install $apps
+
+# Install global packages and openssh
+scoop install win32-openssh 7zip git --global
+& C:\ProgramData\scoop\apps\win32-openssh\current\install-sshd.ps1
 
 
 # extra scoop buckets
@@ -147,11 +146,11 @@ if ($projectsPathInput -ne '') {
 Write-Host ""
 Write-Host "Adding Path Exclusion: " $projectsPath
 Add-MpPreference -ExclusionPath $projectsPath
-[System.Environment]::SetEnvironmentVariable("PROJECTS", $projectsPath, [System.EnvironmentVariableTarget]::Machine)
+[System.Environment]::SetEnvironmentVariable('PROJECTS', $projectsPath, [System.EnvironmentVariableTarget]::Machine)
 
 # Golang
 $goPathVal = $projectsPath + "\Go"
-[System.Environment]::SetEnvironmentVariable("GOPATH", $goPathVal, [System.EnvironmentVariableTarget]::Machine)
+[System.Environment]::SetEnvironmentVariable('GOPATH', $goPathVal, [System.EnvironmentVariableTarget]::Machine)
 Write-Host "Adding Path Exclusion: " $goPathVal
 Add-MpPreference -ExclusionPath $goPathVal
 
