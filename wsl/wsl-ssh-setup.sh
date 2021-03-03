@@ -3,9 +3,18 @@
 echo "What is your windows username?"
 read username
 
-sourcePath="/mnt/c/Users/$username/.ssh"
-echo "Copying files from $sourcePath"
+sourcePath="/mnt/c/Users/$username"
+echo "Copying files from $sourcePath/.ssh"
 cp -r $sourcePath ~/.ssh
+
+echo "Copying git config from $sourcePath/.gitconfig"
+cp $sourcePath/.gitconfig ~/.gitconfig
+
+echo "Copying x11 setup from $sourcePath/Configuration/wsl/x11config.sh"
+cp $sourcePath/Configuration/wsl/x11config.sh ~/x11config.sh
+
+echo "Copying wsl config from $sourcePath/Configuration/wsl/wsl.conf"
+sudo cp $sourcePath/Configuration/wsl/wsl.conf /etc/wsl.conf
 
 echo "Fixing ssh permissions"
 chmod 700 ~/.ssh

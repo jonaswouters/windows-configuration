@@ -56,7 +56,7 @@ The installation script might be included at a later point in this repo
 
 ## Todo
 
-* Make powershell look nicer
+* ~~Make powershell look nicer~~
 * ~~SSH agent setup (dont forget WSL)~~
 * ~~Git config setup~~
 * ~~PHP Version manager powershell~~
