@@ -198,9 +198,16 @@ $processExclusions.Add('hey.exe') > $null
 # Additional programs
 $processExclusions.Add('reMarkable.exe') > $null
 $processExclusions.Add('Charles.exe') > $null
-$processExclusions.Add('GoogleDriveFS.exe') > $null
 $processExclusions.Add('Keybase.exe') > $null
-$processExclusions.Add('Everything.exe') > $null
+
+# Gaming
+$processExclusions.Add('steam.exe') > $null
+$processExclusions.Add('steamwebhelper.exe') > $null
+$processExclusions.Add('EpicGameLauncher.exe') > $null
+$processExclusions.Add('EpicWebHelper.exe') > $null
+$processExclusions.Add('BEService.exe') > $null
+$processExclusions.Add('FortniteClient-Win64-Shipping_BE.exe') > $null
+$processExclusions.Add('FortniteLauncher.exe') > $null
 
 Write-Host "This script will create Windows Defender exclusions for common Visual Studio 2017 folders and processes."
 Write-Host ""
