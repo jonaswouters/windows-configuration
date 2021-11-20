@@ -18,5 +18,5 @@ sudo cp $sourcePath/Configuration/wsl/wsl.conf /etc/wsl.conf
 
 echo "Fixing ssh permissions"
 chmod 700 ~/.ssh
-chmod -R 600 ~/.ssh/id_rsa*
+chmod -R 600 ~/.ssh/id_*
 chmod -R 600 ~/.ssh/config

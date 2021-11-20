@@ -28,6 +28,25 @@ The installation script might be included at a later point in this repo
 * Remarkable desktop: https://my.remarkable.com/
 * DriveThruRPG
 * Painter
+* Tobii
+* backblaze
+* LGHub
+* Printer
+* Nvidia
+* streamdeck
+* Creative Cloud Desktop
+* Soundpad
+* Voicemod
+* iCloud
+* Toggl
+* Epic
+* Nvidia broadcast
+* BakkesMod
+* Charles
+* Filezilla
+* GameGlass
+
+
 
 
 ## Manual configuration (for now)
