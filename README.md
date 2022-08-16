@@ -20,11 +20,9 @@ The installation script might be included at a later point in this repo
 
 * 1Password: https://1password.com/downloads/windows/
 * Install windows store apps
-* Eagle: https://en.eagle.cool/download/
 * Revo Uninstaller Pro: https://www.revouninstaller.com/download-professional-version.php
 * Optional: Registry workshop: http://torchsoft.com/en/rw_information.html
 * TreeSize: https://customers.jam-software.de/directDownload.php
-* Adguard: https://adguard.com/en/welcome.html
 * Remarkable desktop: https://my.remarkable.com/
 * DriveThruRPG
 * Painter
@@ -32,20 +30,14 @@ The installation script might be included at a later point in this repo
 * backblaze
 * LGHub
 * Printer
-* Nvidia
-* streamdeck
 * Creative Cloud Desktop
-* Soundpad
 * Voicemod
-* iCloud
-* Toggl
-* Epic
-* Nvidia broadcast
 * BakkesMod
-* Charles
-* Filezilla
-* GameGlass
+* Windows Node Version Manager (NVM): https://github.com/coreybutler/nvm-windows/releases
 
+## Fonts (https://www.nerdfonts.com/font-downloads)
+* CascadiaCode-NF-Mono
+* CascadiaCode-NF
 
 
 

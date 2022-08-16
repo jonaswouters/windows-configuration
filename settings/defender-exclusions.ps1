@@ -208,6 +208,12 @@ $processExclusions.Add('EpicWebHelper.exe') > $null
 $processExclusions.Add('BEService.exe') > $null
 $processExclusions.Add('FortniteClient-Win64-Shipping_BE.exe') > $null
 $processExclusions.Add('FortniteLauncher.exe') > $null
+$processExclusions.Add('BakkesMod.exe') > $null
+
+# RSI
+$pathExclusions.Add('C:\Program Files\Roberts Space Industries') > $null
+$processExclusions.Add('RSI Launcher.exe') > $null
+$processExclusions.Add('StarCitizen.exe') > $null
 
 Write-Host "This script will create Windows Defender exclusions for common Visual Studio 2017 folders and processes."
 Write-Host ""

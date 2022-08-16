@@ -1,9 +1,9 @@
 # Disable cortana
-$path = "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Search"     
-IF(!(Test-Path -Path $path)) {  
-    New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows" -Name "Windows Search" 
-}  
-Set-ItemProperty -Path $path -Name "AllowCortana" -Value 1  
+#$path = "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Search"     
+#IF(!(Test-Path -Path $path)) {  
+#    New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows" -Name "Windows Search" 
+#}  
+#Set-ItemProperty -Path $path -Name "AllowCortana" -Value 1  
 
 
 # Add items to Explorer Quick Access

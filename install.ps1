@@ -8,24 +8,6 @@ $configFolder = "$HOME\Configuration"
 # Set execution policy
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
-# Install Chocolatey if not installed 
-if(test-path "C:\ProgramData\chocolatey\choco.exe"){	
-    Write-Output "Chocolatey Version $testchoco is already installed"
-}
-else{	
-    Write-Output "Seems Chocolatey is not installed, installing now"	   
-    Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-}
-
-# Install Scoop if not installed.
-if(test-path "$HOME\scoop\apps\scoop\current"){
-    Write-Output "Scoop is already installed"
-}
-else{
-    Write-Output "Seems like Scoop is not installed, installing now"
-    Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
-}
-
 ################################################
 write-host $break$linebreak
 write-host "Renaming PC"
@@ -46,24 +28,58 @@ write-host "Installing base packages"
 write-host $linebreak
 ################################################
 
-scoop update
-
-# Install basic packages to be able to proceed
-$apps = Write-Output `
-    aria2 `
-    gsudo
-
-scoop install $apps
-
-# Install global packages and openssh
-scoop install win32-openssh 7zip git --global
-& C:\ProgramData\scoop\apps\win32-openssh\current\install-sshd.ps1
-
-
-# extra scoop buckets
-scoop bucket add extras
-scoop bucket add nerd-fonts
-scoop bucket add nonportable
+# Winget
+(
+	"Google.Chrome",
+    "7zip.7zip",
+    "XPDC2RH70K22MN", # Discord
+    "9NKSQGP7F2NH", # WhatsApp
+    "Microsoft.WindowsTerminal.Preview",
+    "Amazon.AWSCLI",
+    "CPUID.CPU-Z",
+    "Microsoft.PowerToys",
+    "9WZDNCRDK3WP", # Slack
+    "Valve.Steam",
+    "Microsoft.Teams.Preview",
+    "Ubisoft.Uplay",
+    "Microsoft.VisualStudioCode",
+    "AgileBits.1Password",
+    "CloudImperiumGames.RSILauncher",
+    #"rammichael.7+TaskbarTweaker", # Not supported on windows 11
+    "ImageMagick.ImageMagick",
+    "ogdesign.Eagle",
+    "Graphviz.Graphviz",
+    "vim.vim",
+    "JetBrains.Toolbox",
+    "ElectronicArts.EADesktop",
+    "TimKosse.FileZilla.Client",
+    "CodeSector.TeraCopy",
+    "9NV4BS3L1H4S", # QuickLook
+    "9NBLGGH4Z1SP", # VLC ???
+    "VideoLAN.VLC",
+    "ShareX.ShareX", # "9NBLGGH4Z1SP", # ShareX. Store version does not work with Streamdeck
+    "XP99VR1BPSBQJ2", # Epic Games Store
+    "9P9TQF7MRM4R", # Windows Subsystem for Linux Preview
+    "Yubico.YubikeyManager",
+    "9NFNG39387K0", # Yubico Authenticator
+    "GnuPG.Gpg4win",
+    "Elgato.StreamDeck",
+    "9PMRW2DG7JFW", # GameGlass
+    "JAMSoftware.TreeSize",
+    "9PKTQ5699M62", # iCloud
+    "9WZDNCRDCTL3", # Soundpad
+    "Nvidia.Broadcast",
+    "Nvidia.GeForceExperience",
+    "9NK3RF9NBJNP", # Toggl Track
+    "XK72.Charles",
+    "9PLDPG46G47Z", # Xbox Insider Hub
+    "Obsidian.Obsidian",
+    "Docker.DockerDesktop",
+    "GlassWire.GlassWire",
+    "gerardog.gsudo",
+    "9MZ1SNWT0N5D", # Powershell,
+    "Bostrot.WSLManager"
+) | foreach {winget install -e --id $_ --accept-package-agreements --accept-source-agreements}
 
 ################################################
 write-host $break$linebreak
@@ -84,7 +100,7 @@ write-host "Retrieving git repository"
 if(Test-Path $configFolder){
     write-host "Using existing git repository" $configFolder
     Set-Location $configFolder
-    git pull
+    #git pull
 } else {
     write-host "Cloning git repository to" $configFolder
     git clone $repoUrl $configFolder
@@ -94,42 +110,6 @@ if(Test-Path $configFolder){
 write-host $linebreak$break$break
 ################################################
 
-# Install other packages
-write-host "Installing other packages ..."
-choco install -y .\apps\dev.config
-choco install -y .\apps\productivity.config
-choco install -y .\apps\media.config
-choco install -y .\apps\social.config
-choco install -y .\apps\security.config
-& .\apps\store.ps1
-
-# Install fonts
-$fonts = Write-Output `
-    CascadiaCode-NF-Mono `
-    CascadiaCode-NF
-
-scoop install $fonts
-
-$apps = Write-Output `
-    graphviz `
-    imagemagick `
-    nvm `
-    go `
-    concfg `
-    pshazz `
-    curl `
-    neovim `
-    grep `
-    sed `
-    less `
-    touch `
-    coreutils `
-    hwinfo `
-    7tt
-
-scoop install $apps
-
-concfg import solarized-dark
 
 ################################################
 write-host $break$linebreak
@@ -153,12 +133,6 @@ $goPathVal = $projectsPath + "\Go"
 [System.Environment]::SetEnvironmentVariable('GOPATH', $goPathVal, [System.EnvironmentVariableTarget]::Machine)
 Write-Host "Adding Path Exclusion: " $goPathVal
 Add-MpPreference -ExclusionPath $goPathVal
-
-# WSL and Hyper-V
-Write-Host ""
-Write-Host "Enabling WSL and Hyper-V"
-Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
-Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 
 ################################################
 
